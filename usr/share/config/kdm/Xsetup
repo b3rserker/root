@@ -2,3 +2,11 @@
 # Xsetup - run as root before the login dialog appears
 
 #xconsole -geometry 480x130-0-0 -notify -verbose -fn fixed -exitOnFail -file /dev/xconsole &
+
+# Check whether the external monitor is connected
+xrandr | grep VGA1 | grep " connected "
+
+# 0 is returned on success
+if [ $? -eq 0 ]; then
+  xrandr --output LVDS1 --off
+fi
