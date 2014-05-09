@@ -8,5 +8,6 @@ xrandr | grep VGA1 | grep " connected "
 
 # 0 is returned on success
 if [ $? -eq 0 ]; then
+  xrandr --output VGA1 --on --output --primary
   xrandr --output LVDS1 --off
 fi
