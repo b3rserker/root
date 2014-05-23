@@ -166,6 +166,8 @@ enumeration = select
 [Option Analog Output:Speakers]
 name = output-speaker
 priority = 10
+# Added by Berserker
+switch=on
 
 [Option Analog Output:Headphones]
 name = output-headphones
