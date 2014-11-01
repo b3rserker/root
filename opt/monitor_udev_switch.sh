@@ -1,5 +1,6 @@
 #!/bin/bash
 export DISPLAY=:0.0
+export XAUTHORITY=/home/berserker/.Xauthority
 
 xrandr | grep "VGA1 connected"
 if [[ $? == 0 ]]; then
